@@ -34,10 +34,27 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 #popup p {
     font-size: 24px; /* Tamanho da fonte */
     color: black; /* Cor da fonte */
     margin: 20px 0; /* Margem em cima e embaixo */
+}
+
+/* Estilos do botão "Próximo" */
+#nextToHeart {
+    position: absolute;
+    bottom: 20px; /* Margem da parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o botão horizontalmente */
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10; /* Garante que o botão fique acima de outros elementos */
 }
 
 .hidden {
@@ -84,7 +101,9 @@ button:hover {
     margin-top: 20px;
     line-height: 1.5;
 }
-
+#img2 {
+    margin-bottom: 5em;
+}
 /* Responsividade */
 @media (max-width: 480px) {
     button {
