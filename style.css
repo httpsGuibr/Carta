@@ -8,6 +8,7 @@
 
 /* Geral */
 body {
+    min-height: 100vh;
     font-family: 'Lemon Milk', Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -16,9 +17,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     flex-direction: column;
     overflow: hidden;
+    height: auto; /* Permite que a página cresça para baixo */
+    overflow-y: auto; /* Permite o scroll */
 }
 
 
@@ -43,7 +45,7 @@ body {
 
 /* Estilos do botão "Próximo" */
 #nextToHeart {
-    position: absolute;
+    position: relative;
     bottom: 20px; /* Margem da parte inferior */
     left: 50%;
     transform: translateX(-50%); /* Centraliza o botão horizontalmente */
@@ -55,7 +57,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
     z-index: 10; /* Garante que o botão fique acima de outros elementos */
-}
+    align-self: center; /* Centraliza o botão */}
 
 .hidden {
     display: none;
@@ -102,7 +104,16 @@ button:hover {
     line-height: 1.5;
 }
 #img2 {
-    margin-bottom: 11em;
+    margin-bottom: 2em;
+}
+/* Página de imagem (sem bordas) */
+#imagePage img {
+    width: 100%;
+    height: auto; /* Garante que a imagem tenha a altura proporcional */
+    object-fit: contain; /* Ajusta a imagem dentro do container sem cortá-la */
+    max-height: 100vh; /* Garante que a imagem não ultrapasse a altura da tela */
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 /* Responsividade */
 @media (max-width: 480px) {
